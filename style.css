@@ -1,0 +1,51 @@
+/* styling index.html */
+body {
+    background-image: url(Gee-Software-Dev.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(191, 217, 243);
+    color: purple;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: rgb(73, 36, 36);
+}
+
+/* Styling contacts.html */
+h2 {
+    margin: 0;
+    color: rgb(73, 36, 36);
+}
+.containerform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 300px;
+    border: 2px;
+    padding: 100px;
+}
