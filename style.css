@@ -1,51 +1,190 @@
-/* styling index.html */
-body {
-    background-image: url(Gee-Software-Dev.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+/* Header Animation */
+@keyframes headerAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
 }
-
-
 
 header {
-    display: flex;
-    align-items: center;
-    background-color: rgb(191, 217, 243);
-    color: purple;
-    justify-content: space-around;
-    padding: 10px 20px;
+    background: linear-gradient(45deg, #007bff, #00ff00, #ff0000, #ff00ff, #007bff);
+    background-size: 400% 400%;
+    animation: headerAnimation 15s ease infinite;
+    padding: 20px;
+    text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
+/* Body Animation */
+@keyframes bodyAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+body {
+    background: linear-gradient(45deg, #007bff, #00ff00, #ff0000, #ff00ff, #007bff);
+    background-size: 400% 400%;
+    animation: bodyAnimation 15s ease infinite;
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
+
+/* Global Styles */
+
+h1, h2, h3 {
+    color: #fff; /* White text */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #ccc; /* Light gray text */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #66cc00; /* Green text */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #33cc00; /* Darker green text on hover */
+}
+
+/* Header Styles */
+
+header {
+    background-color: #444; /* Darker gray background */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav li {
     margin-right: 20px;
 }
 
-h1 {
-    margin: 0;
-    color: rgb(73, 36, 36);
+header nav a {
+    color: #fff; /* White text */
+    text-decoration: none;
 }
 
-/* Styling contacts.html */
-h2 {
-    margin: 0;
-    color: rgb(73, 36, 36);
-}
-.containerform {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header nav a:hover {
+    color: #ccc; /* Light gray text on hover */
 }
 
-form {
-    width: 300px;
-    border: 2px;
-    padding: 100px;
+/* About Section Styles */
+
+#about {
+    background-color: #555; /* Dark gray background */
+    padding: 20px;
+}
+
+#about img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+/* Skills Section Styles */
+
+#skills {
+    background-color: #666; /* Dark gray background */
+    padding: 20px;
+}
+
+#skills ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#skills li {
+    margin-bottom: 10px;
+}
+
+/* Portfolio Section Styles */
+
+#portfolio {
+    background-color: #777; /* Dark gray background */
+    padding: 20px;
+}
+
+.project {
+    background-color: #888; /* Dark gray background */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.project img {
+    width: 80%;
+    height: 70%;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Contacts Section Styles */
+
+#contacts {
+    background-color: #999; /* Dark gray background */
+    padding: 20px;
+}
+
+#contacts form {
+    margin: 20px auto;
+    width: 80%;
+}
+
+#contacts label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#contacts input[type="text"],
+#contacts input[type="email"] {
+    background-color: #ccc; /* Light gray background */
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#contacts input[type="submit"] {
+    background-color: #444; /* Dark gray background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#contacts input[type="submit"]:hover {
+    background-color: #555; /* Darker gray background */
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #aaa; /* Light gray background */
+    padding: 10px;
+    text-align: center;
+    color: #fff; /* White text */
 }
