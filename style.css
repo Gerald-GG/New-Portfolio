@@ -181,10 +181,24 @@ header nav a:hover {
 }
 
 /* Footer Styles */
-
 footer {
-    background-color: #aaa; /* Light gray background */
-    padding: 10px;
+    background-color: #444; /* Dark gray background */
+    padding: 20px;
     text-align: center;
     color: #fff; /* White text */
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: aqua; /* White text */
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Blue color on hover */
 }
