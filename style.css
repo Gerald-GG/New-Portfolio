@@ -1,3 +1,5 @@
+/* style.css */
+
 /* Importing Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
@@ -8,9 +10,71 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* 1. Color Scheme */
 body {
+    background-color: #161a2d; /* Dark navy blue background */
+    color: #fff; /* White text color */
+}
+
+.sidebar {
+    background-color: #202a41; /* Slightly different dark navy blue for the sidebar */
+    color: #fff; /* White text color */
+}
+
+.sidebar-links a {
+    color: #fff; /* White link color */
+}
+
+.sidebar-links a:hover {
+    color: #ff4d4d; /* Red link color on hover */
+}
+
+.content {
+    background-color: #1e223a; /* Lighter shade for the content background */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    color: #fff; /* White text color */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth transition for background and text color */
+}
+
+/* 2. Typography */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font for headings */
+    color: #fff; /* White color for headings */
+}
+
+/* 3. Animations and Transitions */
+.project img {
+    transition: transform 0.3s ease-in-out; /* Smooth image scale transition */
+}
+
+.project img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* 4. Images and Graphics */
+.project img {
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* 5. Whitespace and Layout */
+.container {
+    padding: 20px; /* Add padding to containers */
+}
+
+/* 6. Interactive Elements */
+.social-icons a {
+    margin-right: 10px; /* Add spacing between social icons */
+    color: #fff; /* White text color for icons */
+}
+
+.social-icons a:hover {
+    color: #ff4d4d; /* Red icon color on hover */
+}
+
+body {
+    display: flex;
     min-height: 100vh;
-    background: #F0F4FF;
+    background: #161a2d; /* Updated background color */
 }
 
 .sidebar {
@@ -22,7 +86,7 @@ body {
     display: flex;
     overflow-x: hidden;
     flex-direction: column;
-    background: #161a2d;
+    background: #202a41; /* Slightly different dark navy blue for the sidebar */
     padding: 25px 20px;
     transition: all 0.4s ease;
 }
@@ -122,7 +186,7 @@ body {
 .user-profile {
     display: flex;
     align-items: center;
-    color: #161a2d;
+    color: #fff;
 }
 
 .user-profile img {
@@ -151,180 +215,164 @@ body {
     border-radius: 4px;
 }
 
-/* Global Styles */
-
-body {
-    background-color: #222; /* Darker gray background */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.content {
+    margin-left: 85px;
+    padding: 20px;
+    width: calc(100% - 85px);
+    transition: margin-left 0.4s ease, width 0.4s ease;
 }
 
-h1, h2, h3 {
-    color: #fff; /* White text */
-    font-weight: bold;
-    margin-bottom: 10px;
+.sidebar:hover ~ .content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
 }
 
-p {
-    color: #ccc; /* Light gray text */
-    font-size: 18px;
+.header-container {
+    text-align: center;
+    color: #fff; /* White text color for headers */
     margin-bottom: 20px;
 }
 
-a {
-    color: #66cc00; /* Green text */
-    text-decoration: none;
+.header-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-a:hover {
-    color: #33cc00; /* Darker green text on hover */
+.header-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 5px;
 }
 
-/* Header Styles */
+.header-container h3 {
+    font-size: 1.25rem;
+}
 
-header {
-    background-color: #444; /* Darker gray background */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    text-align: center;
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+.container h2 {
+    color: #fff; /* White text color for container headers */
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-header nav li {
-    margin-right: 20px;
-}
-
-header nav a {
-    color: #fff; /* White text */
-    text-decoration: none;
-}
-
-header nav a:hover {
-    color: #ccc; /* Light gray text on hover */
-}
-
-/* About Section Styles */
-
-#about {
-    background-color: #555; /* Dark gray background */
-    padding: 20px;
+.container p {
+    color: #fff; /* White text color for container paragraphs */
+    line-height: 1.6;
 }
 
 #about img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 20px auto;
-}
-
-/* Skills Section Styles */
-
-#skills {
-    background-color: #666; /* Dark gray background */
-    padding: 20px;
-}
-
-#skills ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#skills li {
-    margin-bottom: 10px;
-}
-
-/* Portfolio Section Styles */
-
-#portfolio {
-    background-color: #777; /* Dark gray background */
-    padding: 20px;
-}
-
-.project {
-    background-color: #888; /* Dark gray background */
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: center;
-}
-
-.project img {
-    width: 80%;
-    height: 70%;
-    margin-bottom: 20px;
-}
-
-.project h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-/* Contacts Section Styles */
-
-#contacts {
-    background-color: #999; /* Dark gray background */
-    padding: 20px;
-}
-
-#contacts form {
-    margin: 20px auto;
-    width: 80%;
-}
-
-#contacts label {
     display: block;
-    margin-bottom: 10px;
+    margin: 20px auto;
+    border-radius: 50%;
 }
 
-#contacts input[type="text"],
-#contacts input[type="email"] {
-    background-color: #ccc; /* Light gray background */
-    border: none;
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-#contacts input[type="submit"] {
-    background-color: #444; /* Dark gray background */
-    color: #fff; /* White text */
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-#contacts input[type="submit"]:hover {
-    background-color: #555; /* Darker gray background */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #444; /* Dark gray background */
-    padding: 20px;
-    text-align: center;
-    color: #fff; /* White text */
-}
-
-.social-icons {
+.skills-category h3 {
+    color: #fff; /* White text color for skills category headers */
+    font-size: 1.5rem;
     margin-top: 20px;
 }
 
+.skills-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-category li {
+    color: #fff; /* White text color for skills list items */
+    font-size: 1rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.skills-category li i {
+    margin-right: 10px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.project h3 {
+    text-align: center;
+    color: #fff; /* White text color for project headers */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    text-align: center;
+    color: #fff; /* White text color for project paragraphs */
+    line-height: 1.6;
+}
+
+.containerform {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.containerform label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff; /* White text color for form labels */
+}
+
+.containerform input[type="text"],
+.containerform input[type="email"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.containerform input[type="submit"] {
+    background: #4f52ba; /* Lighter blue background for submit button */
+    color: #fff; /* White text color for submit button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.containerform input[type="submit"]:hover {
+    background: #ff4d4d; /* Red background on hover for submit button */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #202a41; /* Slightly different dark navy blue for footer */
+    color: #fff; /* White text color for footer */
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .social-icons a {
-    color: #fff; /* White text */
-    font-size: 24px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    color: #fff; /* White text color for social icons */
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 .social-icons a:hover {
-    color: #007bff; /* Blue color on hover */
+    color: #4f52ba; /* Lighter blue color on hover for social icons */
 }
