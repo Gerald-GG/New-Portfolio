@@ -1,0 +1,50 @@
+## Gerald Gicharu's Portfolio
+
+Welcome to Gerald Gicharu's portfolio website! This site showcases my work as a Full-Stack Web Developer and Network Technician, featuring information about my skills, projects, and how to get in touch.
+
+# Live Site
+You can view the live portfolio at: https://geraldggportfolio.netlify.app
+
+# Features
+ * About Me: Learn more about Gerald's background, education, and experience.
+ * Skills: Detailed list of technical skills including Networking, Frontend and Backend Development, and Problem-Solving.
+ * Portfolio: Highlights of recent projects with descriptions and images.
+ * Contacts: Contact form and social media links to get in touch with Gerald.
+
+# Technologies Used
+ * HTML
+ * CSS
+ * JavaScript
+ * React
+ * Python (Flask & Django)
+ * MySQL
+
+# Installation
+To run this project locally, clone the repository and open the index.html file in your preferred browser.
+
+
+    git clone git@github.com:Gerald-GG/New-Portfolio.git
+
+    cd New-Portfolio
+
+ * Open index.html in your web browser.
+
+# Usage
+Feel free to browse through the different sections to get a sense of my work and skills. If you have any questions or would like to connect, use the contact form or reach out via the social media links provided.
+
+# Contribution
+If you would like to contribute to this project, please follow these steps:
+
+ 1. Fork the repository.
+ 2. Create a new branch (git checkout -b feature-branch).
+ 3. Make your changes.
+ 4. Commit your changes (git commit -am 'Add new feature').
+ 5. Push to the branch (git push origin feature-branch).
+ 6. Create a new Pull Request.
+
+# License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+# Acknowledgments
+Thanks to Netlify for hosting this portfolio.
+Special thanks to the open-source community for their contributions and resources.
