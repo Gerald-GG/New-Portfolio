@@ -14,70 +14,14 @@
 body {
     background-color: #161a2d; /* Dark navy blue background */
     color: #fff; /* White text color */
-}
-
-.sidebar {
-    background-color: #202a41; /* Slightly different dark navy blue for the sidebar */
-    color: #fff; /* White text color */
-}
-
-.sidebar-links a {
-    color: #fff; /* White link color */
-}
-
-.sidebar-links a:hover {
-    color: #ff4d4d; /* Red link color on hover */
-}
-
-.content {
-    background-color: #1e223a; /* Lighter shade for the content background */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    color: #fff; /* White text color */
-    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth transition for background and text color */
-}
-
-/* 2. Typography */
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif; /* Use Poppins font for headings */
-    color: #fff; /* White color for headings */
-}
-
-/* 3. Animations and Transitions */
-.project img {
-    transition: transform 0.3s ease-in-out; /* Smooth image scale transition */
-}
-
-.project img:hover {
-    transform: scale(1.05); /* Scale up on hover */
-}
-
-/* 4. Images and Graphics */
-.project img {
-    border-radius: 8px; /* Rounded corners for images */
-}
-
-/* 5. Whitespace and Layout */
-.container {
-    padding: 20px; /* Add padding to containers */
-}
-
-/* 6. Interactive Elements */
-.social-icons a {
-    margin-right: 10px; /* Add spacing between social icons */
-    color: #fff; /* White text color for icons */
-}
-
-.social-icons a:hover {
-    color: #ff4d4d; /* Red icon color on hover */
-}
-
-body {
     display: flex;
     min-height: 100vh;
     background: #161a2d; /* Updated background color */
 }
 
 .sidebar {
+    background-color: #202a41; /* Slightly different dark navy blue for the sidebar */
+    color: #fff; /* White text color */
     position: fixed;
     top: 0;
     left: 0;
@@ -86,7 +30,6 @@ body {
     display: flex;
     overflow-x: hidden;
     flex-direction: column;
-    background: #202a41; /* Slightly different dark navy blue for the sidebar */
     padding: 25px 20px;
     transition: all 0.4s ease;
 }
@@ -219,6 +162,8 @@ body {
     margin-left: 85px;
     padding: 20px;
     width: calc(100% - 85px);
+    background-color: #1e223a; /* Lighter shade for the content background */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
     transition: margin-left 0.4s ease, width 0.4s ease;
 }
 
@@ -270,6 +215,10 @@ body {
     border-radius: 50%;
 }
 
+.skills-category {
+    text-align: center; /* Center the skills container */
+}
+
 .skills-category h3 {
     color: #fff; /* White text color for skills category headers */
     font-size: 1.5rem;
@@ -279,14 +228,15 @@ body {
 .skills-category ul {
     list-style: none;
     padding-left: 0;
+    text-align: center; /* Center the list items */
 }
 
 .skills-category li {
     color: #fff; /* White text color for skills list items */
     font-size: 1rem;
     margin: 10px 0;
-    display: flex;
-    align-items: center;
+    display: inline-block; /* Make list items inline-block for centering */
+    text-align: left; /* Align text to the left within the inline-block item */
 }
 
 .skills-category li i {
@@ -300,6 +250,12 @@ body {
 .project img {
     display: block;
     margin: 0 auto 20px;
+    border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s ease-in-out; /* Smooth image scale transition */
+}
+
+.project img:hover {
+    transform: scale(1.05); /* Scale up on hover */
 }
 
 .project h3 {
@@ -327,13 +283,16 @@ body {
 }
 
 .containerform input[type="text"],
-.containerform input[type="email"] {
+.containerform input[type="email"],
+.containerform textarea {
     width: 100%;
     max-width: 500px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background: #fff; /* White background for inputs */
+    color: #000; /* Black text color for inputs */
 }
 
 .containerform input[type="submit"] {
@@ -375,4 +334,54 @@ footer p {
 
 .social-icons a:hover {
     color: #4f52ba; /* Lighter blue color on hover for social icons */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar:hover {
+        width: 220px;
+    }
+
+    .content {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+    }
+
+    .sidebar:hover ~ .content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
+    .header-container h1 {
+        font-size: 2rem;
+    }
+
+    .header-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .header-container h3 {
+        font-size: 1rem;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    .project h3 {
+        font-size: 1.25rem;
+    }
+
+    .skills-category h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
